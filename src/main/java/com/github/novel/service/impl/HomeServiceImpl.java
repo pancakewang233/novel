@@ -1,12 +1,16 @@
-package com.github.novel.service;
+package com.github.novel.service.impl;
 
 import com.github.novel.core.common.resp.RestResp;
+import com.github.novel.dto.resp.HomeBookRespDto;
 import com.github.novel.manager.HomeBookCacheManager;
+import com.github.novel.service.HomeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import java.util.List;
 
 /**
  * 首页模块 服务实现类
+ * @author 83443
  */
 @Service
 @RequiredArgsConstructor

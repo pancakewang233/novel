@@ -3,14 +3,24 @@ package com.github.novel.manager;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.github.novel.core.common.constant.CacheConsts;
+import com.github.novel.dao.entity.BookInfo;
+import com.github.novel.dao.entity.HomeBook;
+import com.github.novel.dao.mapper.BookInfoMapper;
+import com.github.novel.dao.mapper.HomeBookMapper;
+import com.github.novel.dto.resp.HomeBookRespDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * 首页推荐小说 缓存管理类
+ * @author 83443
  */
 @Component
 @RequiredArgsConstructor

@@ -1,7 +1,13 @@
 package com.github.novel.service;
 
+import com.github.novel.core.common.resp.RestResp;
+import com.github.novel.dto.resp.HomeBookRespDto;
+
+import java.util.List;
+
 /**
  * 首页模块 服务类
+ * @author 83443
  */
 public interface HomeService {
 
