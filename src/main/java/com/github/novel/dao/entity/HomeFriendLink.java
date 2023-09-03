@@ -8,36 +8,55 @@ import lombok.Data;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-/*
-* Serializable是http://java.io包中定义的、用于实现Java类的序列化操作而提供的一个语义级别的接口。
-* Serializable序列化接口没有任何方法或者字段，只是用于标识可序列化的语义。
-* 实现了Serializable接口的类可以被ObjectOutputStream转换为字节流，
-* 同时也可以通过ObjectInputStream再将其解析为对象。
-* */
-
 /**
  * @author 83443
  */
-
-@TableName("home_book")
 @Data
-public class HomeBook implements Serializable {
+@TableName("home_friend_link")
+public class HomeFriendLink implements Serializable {
     private static final long serialVersionUID = 1L;
+
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
-    private Integer type;
+
+    /**
+     * 链接名
+     */
+    private String linkName;
+
+    /**
+     * 链接url
+     */
+    private String linkUrl;
+
+    /**
+     * 排序号
+     */
     private Integer sort;
-    private Long bookId;
+
+    /**
+     * 是否开启;0-不开启 1-开启
+     */
+    private Integer isOpen;
+
+    /**
+     * 创建时间
+     */
     private LocalDateTime createTime;
+
+    /**
+     * 更新时间
+     */
     private LocalDateTime updateTime;
 
     @Override
     public String toString() {
-        return "HomeBook{" +
+        return "HomeFriendLink{" +
                 "id=" + id +
-                ", type=" + type +
+                ", linkName=" + linkName +
+                ", linkUrl=" + linkUrl +
                 ", sort=" + sort +
-                ", bookId=" + bookId +
+                ", isOpen=" + isOpen +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
                 "}";

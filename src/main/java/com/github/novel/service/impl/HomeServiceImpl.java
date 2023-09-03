@@ -20,6 +20,7 @@ public class HomeServiceImpl implements HomeService {
 
     @Override
     public RestResp<List<HomeBookRespDto>> listHomeBooks() {
+
         return RestResp.ok(homeBookCacheManager.listHomeBooks());
     }
 }
