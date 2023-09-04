@@ -1,12 +1,14 @@
 package com.github.novel.dto.resp;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
 /**
  * @author 83443
  */
+@Data
 public class BookInfoRespDto {
 
     @Schema(description = "作品方向;0-男频 1-女频")
@@ -65,4 +67,6 @@ public class BookInfoRespDto {
 
     @Schema(description = "更新时间")
     private LocalDateTime updateTime;
+
+
 }

@@ -11,7 +11,7 @@ import java.util.List;
 public interface BookService {
 
     /**
-     * @return 小说分类列表查询接口
+     * 小说目录列表查询接口
      * */
     RestResp<List<BookCategoryRespDto>> listCategory(Integer workDirection);
 }
