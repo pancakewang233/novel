@@ -1,7 +1,10 @@
 package com.github.novel.dto.resp;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
@@ -9,7 +12,16 @@ import java.time.LocalDateTime;
  * @author 83443
  */
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class BookInfoRespDto {
+
+    /**
+     * ID
+     */
+    @Schema(description = "小说ID")
+    private Long id;
 
     @Schema(description = "作品方向;0-男频 1-女频")
     private Integer workDirection;
